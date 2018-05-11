@@ -37,6 +37,15 @@ I constantly faced 502.5 error and many other little errors in development that 
 Meme: an element of a culture or system of behavior that may be considered to be passed from one individual to another by nongenetic means, especially imitation.
 a humorous image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by Internet users.
 
+# Sources where I took code and or learned from:
+https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=visual-studio
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-2.1
+https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?view=aspnetcore-2.1&tabs=visual-studio
+https://docs.microsoft.com/en-us/aspnet/core/security/authorization/secure-data?view=aspnetcore-2.1
+https://stackoverflow.com/questions/34482323/asp-net-razor-page-dropdown-list?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+https://medium.com/@dreyescairo/create-a-simple-photo-gallery-app-using-asp-net-9d7aed97ce16
+
 
 # Play by Play of the Development PRocess in My Thoughts if you're looking to go DEEP:
 Timeline/Challenges Difficulties for this Project:
