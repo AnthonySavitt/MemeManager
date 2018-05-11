@@ -1,0 +1,12 @@
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\bin\Release\netcoreapp2.0\MemeManager.deps.json
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\bin\Release\netcoreapp2.0\MemeManager.runtimeconfig.json
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\bin\Release\netcoreapp2.0\MemeManager.runtimeconfig.dev.json
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\bin\Release\netcoreapp2.0\MemeManager.dll
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\bin\Release\netcoreapp2.0\MemeManager.pdb
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.csprojResolveAssemblyReference.cache
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.csproj.CoreCompileInputs.cache
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.AssemblyInfoInputs.cache
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.AssemblyInfo.cs
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.dll
+C:\Users\thean\source\repos\MemeManager_Current\MemeManager\MemeManager\obj\Release\netcoreapp2.0\MemeManager.pdb

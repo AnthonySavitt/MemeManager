@@ -1,0 +1,120 @@
+@page
+@model MemeManager.Pages.KnowYourMemes.IndexModel
+
+@{
+    ViewData["Title"] = "Our Trending Memes";
+}
+
+<h2>Our Trending Memes</h2>
+
+
+<div class="col-md-12">
+    <h2>Avengers Infinity War Memes:</h2>
+    <text>Warning: Spoilers ahead: <br /><br />
+    Since Avengers Infinity War came out, these memes have been flying off the shelves! <br />
+    There are many memes to absorb that all can enjoy (who've seen the movie). These can include 'out of context' memes, <br />
+    People disapeering into dust, or our favorite ThanosDidNothingWrong memes! <br /><br />
+
+    Thanos did his part by perfectly balancing the universe, and its now time to do ours by spreading his word.<br />
+    </text>
+
+    <div class="col-md-12">
+        <img src="~/images/Thanos.png" class="img-responsive" /> <br /><br />
+    </div>
+</div>
+
+<div class="col-md-12">
+    <h2>Lord Farquaad / Markiplier E:</h2>
+    <text>
+        Lord Farquaad / Markiplier E refers to a deep fried image of the face YouTube
+        Let’s Player Markiplier photoshopped onto the head of Lord Farquaad from Shrek 
+        with the letter 'E' in impact font overlaying the image. <br/><br />
+
+        This meme is meant to speak about how far memes have come, from being simple raptor images,
+        to memes that make you scratch your head because you wonder why anyone made this. <br />
+    </text>
+
+    <div class="col-md-12">
+        <img src="~/images/E.jpg" class="img-responsive" /> <br /><br />
+    </div>
+</div>
+
+<div class="col-md-12">
+    <h2>Savage Patrick:</h2>
+    <text>
+        Savage Patrick (sometimes referred to as Evil Patrick or Angry Patrick)
+        refers to a still image of Patrick Star from Spongebob Squarepants looking as 
+        though he’s in the midst of a maniacally evil chuckle. <br /><br />
+
+        We are huge Spongebob fans here at Memely, and honestly just cannot get enough of Patrick. 
+        If You disagree, we kindly ask you to leave this page.<br />
+    </text>
+
+    <div class="col-md-6">
+        <img src="~/images/Patrick.jpg" class="img-responsive" /> <br /><br />
+    </div>
+</div>
+
+<div class="col-md-12">
+    <h2>Pepe:</h2>
+    <text>
+        Pepe the Frog is an anthropomorphic frog character from the comic series Boy’s Club by Matt Furie. 
+        On 4chan, various illustrations of the frog creature have been used as reaction faces,
+        including Feels Good Man, Sad Frog, Angry Pepe, Smug Frog and Well Meme’d. <br /><br />
+
+        Although some may say Pepe is not a current month trend, Pepe is a meme that we feel trancends trends. 
+        We also do not approve of the recent politizing of Pepe in the media and are representing him here to hope we can take
+        you to simpler times, back when Pepe was simpler too.<br />
+    </text>
+
+    <div class="col-md-6">
+        <img src="~/images/pepe.png" class="img-responsive" /> <br /><br />
+    </div>
+</div>
+
+<div class="col-md-12">
+    <h2>Doge:</h2>
+    <text>
+        Who doesnt like a cute pup doing his thing?<br /><br />
+
+        It's as simple as that.<br />
+    </text>
+
+    <div class="col-md-6">
+        <img src="~/images/doge.jpg" class="img-responsive" /><br /><br />
+    </div>
+</div>
+
+
+
+
+
+
+@*<p>
+        <a asp-page="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.KnowYourMeme[0].Description)
+                    </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.KnowYourMeme) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Genre">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Genre">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Genre">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+

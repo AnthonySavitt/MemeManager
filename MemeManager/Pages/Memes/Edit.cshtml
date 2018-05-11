@@ -1,0 +1,50 @@
+@page
+@model MemeManager.Pages.Memes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Meme</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Meme.Id" />
+            <div class="form-group">
+                <label asp-for="Meme.Title" class="control-label"></label>
+                <input asp-for="Meme.Title" class="form-control" />
+                <span asp-validation-for="Meme.Title" class="text-danger"></span>
+            </div>
+            @*Added to have it be a dropdown choice of meme genres. This is a high class site with only the best*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.Meme.Genre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Meme.Genre, new List<SelectListItem>
+                       {
+                           new SelectListItem {Text = "Infinity War", Selected = true },
+                           new SelectListItem {Text = "E" },
+                           new SelectListItem {Text = "Pepe"},
+                           new SelectListItem {Text = "Savage Patrick"},
+                           new SelectListItem {Text = "Doggo"},
+                       }, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Meme.Genre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

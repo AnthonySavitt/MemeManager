@@ -1,0 +1,57 @@
+﻿@page
+@model MemeManager.Pages.ImageGalleryModel
+@{
+    ViewData["Title"] = "ImageGallery";
+}
+
+<h2>ImageGallery</h2>
+<div class="row">
+    <div class="col-md-12">
+        @*COMMENT: This is where we can check when the page loads if there is any data in ViewData["SuccessMessage"]
+            If there is, show the message in bootstraps alert box*@
+        @if (ViewData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>@ViewData["SuccessMessage"]</strong>
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    @*COMMENT: Here we loop through the models GalleryImages we got back from the database.
+        If the count is > 0 show a thumbnail of the image and the caption that belongs to it.
+        If there arent any images, display a simple message stating so.*@
+    @if (Model.GalleryImages.Count > 0)
+    {
+        foreach (var image in Model.GalleryImages)
+        {
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <a href="@image.URL" class="thumbnail">
+                        <img src="@image.URL" alt="..." width="600">
+                    </a>
+                    <div class="caption">
+                        @*COMMENT: For the caption, we check if !null
+                            Display the caption if there is one, otherwise display a message stating so*@
+                        @if (image.Caption != null)
+                        {
+                            <p>@image.Caption</p>
+                        }
+                        else
+                        {
+                            <p>No caption available for this image</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <h1>No Images to display!</h1>
+    }
+</div>
+

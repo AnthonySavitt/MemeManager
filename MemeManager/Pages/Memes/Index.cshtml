@@ -1,0 +1,134 @@
+@page
+@model MemeManager.Pages.Memes.IndexModel
+
+@{
+    ViewData["Title"] = "Submit your meme and see other approved submissions";
+}
+
+<h2>Submit your meme and see other approved submissions:</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+
+
+@*Code below adds a search text box and button to form*@
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by title or genre:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    @*asp-route-currentFilter="@Model.CurrentFilter"*@
+                    @Html.DisplayNameFor(model => model.Meme[0].Title)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.GenreSort">
+                    @*asp-route-currentFilter="@Model.CurrentFilter"*@
+                    @Html.DisplayNameFor(model => model.Meme[0].Genre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meme[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meme[0].Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Meme)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+            @*Attempt to display thumbnail of their uploaded image after the fact but doesn't work. Nice*@
+            <td>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <a href="@Html.DisplayFor(modelItem => item.Image.URL)" class="thumbnail">
+                                <img src="@Html.DisplayFor(modelItem => item.Image.URL)" alt="..." width="600">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                @if ((await AuthorizationService.AuthorizeAsync(
+                      User, item,
+                      MemeOperations.Update)).Succeeded)
+                        {
+                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+                            <text> | </text>
+                }
+
+                                <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+
+                                @if ((await AuthorizationService.AuthorizeAsync(
+                      User, item,
+                      MemeOperations.Delete)).Succeeded)
+                        {
+                            <text> | </text>
+                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                }
+
+                                @if (((await AuthorizationService.AuthorizeAsync(
+                     User, item,
+                     MemeOperations.Delete)).Succeeded) & item.Status == MemeStatus.Approved)
+                        {
+                            <text> | </text>
+                            <a asp-page="/ImageUploadForm" asp-route-id="@item.Id">Upload your approved image</a>
+                }
+
+
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@*  Code for an unsued Pagination I could not get to work
+    @{
+        var prevDisabled = !Model.Meme2.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.Meme2.HasNextPage ? "disabled" : "";
+    }
+
+    <a asp-page="./Index"
+       asp-route-sortOrder="@Model.CurrentSort"
+       asp-route-pageIndex="@(Model.Meme2.PageIndex - 1)"
+       asp-route-currentFilter="@Model.CurrentFilter"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-page="./Index"
+       asp-route-sortOrder="@Model.CurrentSort"
+       asp-route-pageIndex="@(Model.Meme2.PageIndex + 1)"
+       asp-route-currentFilter="@Model.CurrentFilter"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+*@
