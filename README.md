@@ -7,7 +7,9 @@ IMPORANT PRE-NOTE: README COntains 2 parts. 1st part is functionality/how to run
 # HOW TO USE:
 Website utilizes authorization with a password that is stored using SecretManagerTools. If you do not have SecretManagerTools, the tutorial is linked here: https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=visual-studio
 
-After installing, and before starting up the program. YOu MUST go to command prompt and set your admin and manager password. Go to command prompt and go to the root (where startup.cs and program.cs are located). Type in this command: user-secrets set SetUserPW <PW>
+After installing, and before starting up the program. YOu MUST go to command prompt and set your admin and manager password. Go to command prompt and go to the root (where startup.cs and program.cs are located). 
+
+Type in this command: user-secrets set SetUserPW InsertPasswordHere
   
 When you want to login as manager or admin on the website username is: admin@memes.com or manager@memes.com. Both with the same password that you set in the command above.
 
