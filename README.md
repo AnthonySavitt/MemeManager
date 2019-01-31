@@ -30,6 +30,8 @@ Should be able to run the website now after password is set. Actual in depth des
 
 ![Homepage featuring 1 of 3 rotating banners](https://drive.google.com/uc?export=view&id=1aRHHUWVHXRes_zYAuqyPn9dAff7ArJbz)
 
+![Register page](https://drive.google.com/uc?export=view&id=1qkebjHiNCEIpwnGId46e2jhME6U32b8m)
+
 
 
 
