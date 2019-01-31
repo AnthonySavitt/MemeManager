@@ -28,7 +28,7 @@ Should be able to run the website now after password is set. Actual in depth des
 
 # Screenshots
 
-![Homepage featuring 1 of 3 rotating banners](https://imgur.com/a/nUzBJLf)
+![Homepage featuring 1 of 3 rotating banners](https://drive.google.com/uc?export=view&id=1OMSGlOpoVpWRW0f3iwRP2xwZPYbOwBtd)
 
 
 
