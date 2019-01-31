@@ -26,6 +26,9 @@ Managers can approve,reject anyone but only delete their own.
 
 Should be able to run the website now after password is set. Actual in depth description of website functionality is below Website Pitch:
 
+# Screenshots
+
+![Homepage featuring 1 of 3 rotating banners](https://imgur.com/a/nUzBJLf)
 
 
 
